@@ -9,30 +9,27 @@ package Clases;
  * @author jdara
  */
 public class ClienteModell {
+
     
-    private int codigo, telefono;
-    private String nombre, appelido, direccion, correo;
+    
+    public String direccion, correo, codigo, telefono, nombre;
+    private String appelido;
     
     public ClienteModell (){
     
-        this.nombre="Alumno de ejemplo";
+     
+    String nombre = "No ha sido registrado";
+    String apellido ="No ha sido registrado";
+    String direccion ="No ha sido registrado";
+    String correo = "No ha sido registrado";
+    String codigo ="No ha sido registrado";
+    String telefono ="No ha sido registrado";
+        
         
     }
 
-    public int getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
-    }
-
-    public int getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(int telefono) {
-        this.telefono = telefono;
+    public ClienteModell(String claseCodigo, String claseNombre, String claseDireccion, String claseCorreo, String claseTelefono) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public String getNombre() {
@@ -66,7 +63,26 @@ public class ClienteModell {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-    
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+  
+
+   
     
     
 }
