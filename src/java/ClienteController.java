@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
+import Clases.ClienteModell;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -18,19 +19,23 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet(urlPatterns = {"/ClienteController"})
 public class ClienteController extends HttpServlet {
 
+    ClienteModell  ClienteModell ;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            ClienteModell = new ClienteModell ();
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet ClienteController</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet de ejemplo" + ClienteModell.getNombre() + "</h1>");
+            out.println("<h1>Titulo 1</h1>");
+            out.println("<h2>Titulo 2</h2>");
             out.println("</body>");
             out.println("</html>");
         }
